@@ -59,7 +59,7 @@ body {
     box-shadow: 0 0 3px 1px black;
     border: none;
     border-radius: 8px;
-    background-color: silver;
+    background-color: rgb(211, 211, 211);
     transition: all 0.2s;
 }
 .btn:hover {
@@ -70,7 +70,7 @@ body {
 }
 
 .function {
-    background-color: rgb(255, 200, 155);
+    background-color: rgb(155, 190, 255);
 }
 .zero {
     width: 137px;

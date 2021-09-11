@@ -24,11 +24,11 @@ function numberClick(num) {
     else bottom.innerHTML = bottom.innerHTML + num.toString();
 }
 
-function clearEverything() {
+function clearClick() {
     document.getElementById("bottom").innerHTML = 0;
 }
 
-function backspace() {
+function delClick() {
     let bottom = document.getElementById("bottom");
     if(bottom.innerHTML.length <= 1) bottom.innerHTML = 0;
     else bottom.innerHTML = bottom.innerHTML.substring(0, bottom.innerHTML.length - 1);
