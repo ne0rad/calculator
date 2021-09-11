@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
 
+body {
+    background-color: whitesmoke;
+}
+
 .main {
     display: flex;
     align-items: center;
@@ -69,5 +73,5 @@
     background-color: rgb(255, 200, 155);
 }
 .zero {
-    width: 135px;
+    width: 137px;
 }
