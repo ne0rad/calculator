@@ -33,6 +33,8 @@ function negativeClick() {
     let bottom = document.getElementById("bottom");
     if(bottom.innerHTML.split("-").length == 1) {
         bottom.innerHTML = "-" + bottom.innerHTML;
+    } else {
+        bottom.innerHTML = bottom.innerHTML.replace("-", "");
     }
 }
 
