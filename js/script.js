@@ -22,11 +22,25 @@ function operatorClick(operator) {
     bottom.innerHTML = 0;
 }
 
+function dotClick() {
+    let bottom = document.getElementById("bottom");
+    if(bottom.innerHTML.split(".").length == 1) {
+        bottom.innerHTML += ".";
+    }
+}
+
+function negativeClick() {
+    let bottom = document.getElementById("bottom");
+    if(bottom.innerHTML.split("-").length == 1) {
+        bottom.innerHTML = "-" + bottom.innerHTML;
+    }
+}
+
 function equalsClick() {
     let bottom = document.getElementById("bottom");
     let top = document.getElementById("top");
-    let topNum = parseInt(top.innerHTML.slice(0,top.innerHTML.length-1));
-    let botNum = parseInt(bottom.innerHTML);
+    let topNum = parseFloat(top.innerHTML.slice(0,top.innerHTML.length-1));
+    let botNum = parseFloat(bottom.innerHTML);
     switch (top.innerHTML[top.innerHTML.length-1]) {
         case "+":
             bottom.innerHTML = topNum + botNum;
