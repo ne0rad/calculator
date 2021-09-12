@@ -23,17 +23,20 @@ body {
 
 .display {
     width: 290px;
-    height: 60px;
+    height: 50px;
     box-shadow: 0 0 2px 1px black;
     border-radius: 10px;
     background-color: white;
-    font-size: 24px;
     text-align: right;
-    padding: 10px;
+    padding: 15px;
+}
+.display .top {
+    font-size: 18px;
+    overflow: hidden;
 }
 .display .bottom {
     font-weight: bold;
-    font-size: 28px;
+    font-size: 24px;
 }
 .keyboard {
     display: flex;
@@ -51,7 +54,7 @@ body {
 .btn {
     font-family: 'Nova Mono', monospace;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 34px;
     width: 60px;
     height: 60px;
     margin: 2px;
