@@ -18,8 +18,11 @@ function delClick() {
 function operatorClick(operator) {
     let bottom = document.getElementById("bottom");
     let top = document.getElementById("top");
+    if(top.innerHTML !== "&nbsp;") {
+        equalsClick();
+    }
     top.innerHTML = bottom.innerHTML + operator;
-    bottom.innerHTML = 0;
+    bottom.innerHTML = "0";
 }
 
 function dotClick() {
