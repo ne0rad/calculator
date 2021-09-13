@@ -1,7 +1,9 @@
 function numberClick(num) {
     let bottom = document.getElementById("bottom");
+    if(bottom.innerHTML.length < 20) {
     if(bottom.innerHTML == 0) bottom.innerHTML = num.toString();
     else bottom.innerHTML = bottom.innerHTML + num.toString();
+    }
 }
 
 function clearClick() {
@@ -67,3 +69,15 @@ function equalsClick() {
             break;
     }   
 }
+
+document.addEventListener('keydown', function(e) {
+    if(e.key.match(/[0-9]/)) numberClick(e.key);
+    else if(e.key === "Backspace") delClick();
+    else if(e.key === "c") clearClick();
+    else if(e.key === "+") operatorClick("+");
+    else if(e.key === "-") operatorClick("-");
+    else if(e.key === "/") operatorClick("÷");
+    else if(e.key === ".") dotClick();
+    else if(e.key === "*" || e.key === "x") operatorClick("×");
+    else if(e.key === "=" || e.key === "Enter") equalsClick();
+});
