@@ -1,7 +1,7 @@
 function numberClick(num) {
     let bottom = document.getElementById("bottom");
     if(bottom.innerHTML.length < 20) {
-    if(bottom.innerHTML == 0) bottom.innerHTML = num.toString();
+    if(bottom.innerHTML == 0 && bottom.innerHTML !== "0.") bottom.innerHTML = num.toString();
     else bottom.innerHTML = bottom.innerHTML + num.toString();
     }
 }
@@ -23,7 +23,12 @@ function operatorClick(operator) {
     if(top.innerHTML !== "&nbsp;") {
         equalsClick();
     }
-    top.innerHTML = bottom.innerHTML + operator;
+
+    if(bottom.innerHTML[bottom.innerHTML.length-1] === ".") {
+        top.innerHTML = bottom.innerHTML.replace(".","") + operator; 
+    } else {
+        top.innerHTML = bottom.innerHTML + operator; 
+    }
     bottom.innerHTML = "0";
 }
 
